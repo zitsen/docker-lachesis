@@ -1,0 +1,15 @@
+diff --git 1/m4/ax_lib_samtools.m4 2/m4/ax_lib_samtools.m4.new
+index dddc65d..c8076a4 100644
+--- 1/m4/ax_lib_samtools.m4
++++ 2/m4/ax_lib_samtools.m4.new
+@@ -125,9 +125,8 @@ if test -n "${SAMTOOLS_HOME}" ; then
+         AC_LANG_SAVE
+         AC_LANG_C
+         AC_CHECK_HEADER([sam.h], [ac_cv_sam_h=yes], [ac_cv_sam_h=no])
+-        AC_CHECK_LIB([bam], [sam_open], [ac_cv_libbam=yes], [ac_cv_libbam=no])
+         AC_LANG_RESTORE
+-        if test "$ac_cv_libbam" = "yes" && test "$ac_cv_sam_h" = "yes" ; then
++        if test "$ac_cv_sam_h" = "yes" ; then
+                 #
+                 # If both library and header were found, use them
+                 #
